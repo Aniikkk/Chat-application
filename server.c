@@ -71,16 +71,8 @@ int main(int argc, char *argv[])
         {
             error("Error on writing");
         }
-
-        // code to get out of the loop
-        int i = strncmp("Bye", buffer, 3); // 3 iswhenever the buffer gets the data "bye" from the serverwhich is of lenght 3(cuz we need to specify the string len)
-        if (i == 0)
-        {
-            break;
-        }
-
-        close(newsockfd);
-        close(sockfd);
-        return 0;
     }
+    close(newsockfd);
+    close(sockfd);
+    return 0;
 }

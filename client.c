@@ -72,6 +72,12 @@ int main(int argc, char *argv[])
         }
 
         printf("Server: %s", buffer);
+        // code to get out of the loop
+        int i = strncmp("Bye", buffer, 3); // 3 iswhenever the buffer gets the data "bye" from the serverwhich is of lenght 3(cuz we need to specify the string len)
+        if (i == 0)
+        {
+            break;
+        }
     }
     close(sockfd);
     return 0;
